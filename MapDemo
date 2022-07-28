@@ -1,0 +1,45 @@
+package demo04_Map;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapDemo {
+
+	public static void main(String[] args) {
+		
+		Map<Integer, String> Batch1= new HashMap<Integer, String>();
+        Batch1.put(34, "Shankha");
+        Batch1.put(30, "Abhijit");
+        Batch1.put(24, "Jaga");
+		System.out.println(Batch1);// print Batch1 name,
+		
+		
+		Map<Integer, String> Batch2= new HashMap<Integer, String>();
+        Batch2.put(15, "Subhoraj");
+        Batch2.put(24, "Abhi");
+        Batch2.put(27, "Jaga");
+		System.out.println(Batch2);// print Batch2 name,
+		
+		
+		//Merge the data
+		Map<Integer, String> Merge= new HashMap<Integer, String>(Batch1);
+		System.out.println(Merge); // print Merge batch
+		Merge.putAll(Batch2); //keys cann't be duplicate but values can be
+		System.out.println(Merge);//Map doesn't allow duplicate key, but can have duplicate values
+		
+		//get the data
+		String rollno34 =Merge.get(34);
+		System.out.println(rollno34);
+		
+		System.out.println(Merge.containsKey(34));// checking key
+		System.out.println(Merge.containsValue("Abhi"));// checking 
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
